@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "un-sdg-east-africa-insights-pipeline"
+version = "0.1.0"
+description = "Modular, explainable SDG monitoring pipeline for East Africa"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = [
+  "pandas>=1.5",
+  "numpy>=1.21",
+  "scikit-learn>=0.24",
+  "joblib>=1.0",
+]

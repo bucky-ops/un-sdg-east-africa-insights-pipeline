@@ -1,0 +1,51 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pandas numpy scikit-learn joblib
+      - name: Smoke test pipeline
+        run: |
+          python - <<'PY'
+import sys
+print("Python", sys.version)
+try:
+    from sdg_ea_pipeline.logic.ingestion import ingest as _ingest
+    print("Import ingestion: OK")
+except Exception as e:
+    print("Import ingestion failed:", e)
+try:
+    from sdg_ea_pipeline.logic.cleaning import clean as _clean
+    print("Import cleaning: OK")
+except Exception as e:
+    print("Import cleaning failed:", e)
+try:
+    from sdg_ea_pipeline.logic.fe import feature_engineering as _fe
+    print("Import FE: OK")
+except Exception as e:
+    print("Import FE failed:", e)
+try:
+    from sdg_ea_pipeline.logic.models import train_baseline as _model
+    print("Import models: OK")
+except Exception as e:
+    print("Import models failed:", e)
+try:
+    from sdg_ea_pipeline.outputs.insights import insight_generator as _insight
+    print("Import insights: OK")
+except Exception as e:
+    print("Import insights failed:", e)
+PY
