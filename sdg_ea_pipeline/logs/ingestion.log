@@ -1,0 +1,6 @@
+2026-01-12 09:50:33,041 | INFO | Ingesting placeholder file: C:\Users\Unsub_Log\OneDrive\Desktop\Project Vault\UN - SDG East Africa Insights Pipeline\sdg_ea_pipeline\data\raw\placeholders\dummy_sdg.csv
+2026-01-12 09:50:33,092 | INFO | Ingested dummy_sdg.csv: archived -> dummy_sdg_20260112_065033.csv, interim -> ingested_dummy_sdg_20260112_065033.csv, provenance updated
+2026-01-12 10:40:04,967 | INFO | Ingesting placeholder file: C:\Users\Unsub_Log\OneDrive\Desktop\Project Vault\UN - SDG East Africa Insights Pipeline\sdg_ea_pipeline\data\raw\placeholders\dummy_sdg.csv
+2026-01-12 10:40:05,134 | INFO | Ingested dummy_sdg.csv: archived -> dummy_sdg_20260112_074005.csv, interim -> ingested_dummy_sdg_20260112_074005.csv, provenance updated
+2026-01-12 10:40:55,341 | INFO | Ingesting placeholder file: C:\Users\Unsub_Log\OneDrive\Desktop\Project Vault\UN - SDG East Africa Insights Pipeline\sdg_ea_pipeline\data\raw\placeholders\dummy_sdg.csv
+2026-01-12 10:40:55,474 | INFO | Ingested dummy_sdg.csv: archived -> dummy_sdg_20260112_074055.csv, interim -> ingested_dummy_sdg_20260112_074055.csv, provenance updated

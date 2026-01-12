@@ -1,0 +1,26 @@
+# Lightweight governance defaults for East Africa SDG pipeline
+CONFIG = {
+    "countries": ["KEN", "UGA", "TZA", "RWA", "BDI", "SSD", "ETH", "SOM"],
+    "sdgs": ["SDG1", "SDG2", "SDG3"],
+    "indicators": [
+        {"sdg": 1, "code": "I1", "name": "Population"},
+        {"sdg": 2, "code": "I2", "name": "Agricultural land area (% of total land)"},
+        {"sdg": 3, "code": "I3", "name": "Life expectancy at birth (years)"},
+    ],
+    "years": [2020, 2021, 2022, 2023],
+    "metadata_schema": {
+        "fields": [
+            {"name": "source", "type": "string"},
+            {"name": "year", "type": "integer"},
+            {"name": "country", "type": "string"},
+            {"name": "indicator_code", "type": "string"},
+            {"name": "value", "type": "number"},
+            {"name": "reliability", "type": "string"}
+        ]
+    },
+    "data_quality_flags": {
+        "missing": True,
+        "outdated": True,
+        "estimated": True
+    }
+}

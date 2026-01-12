@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.eggs/
+venv/
+env/
+ENV/
+.venv/
+**/__pycache__/
+
+# Data (do not commit actual data)
+data/
+sdg_ea_pipeline/data/
+
+# IDE/editor
+.vscode/
+.idea/
+.DS_Store
